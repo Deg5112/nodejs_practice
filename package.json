@@ -2,7 +2,12 @@
   "scripts": {
     "test": "node test.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "get-npm-tarball-url": "^2.0.0",
+    "tar-fs": "^1.15.2",
+    "tar.gz": "^1.0.5",
+    "untar": "^0.2.9"
+  },
   "devDependencies": {
     "get-folder-size": "~1.0.0",
     "tape": "~4.6.0",
