@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "get-npm-tarball-url": "^2.0.0",
+    "hawk": "^6.0.1",
     "tar-fs": "^1.15.2",
     "tar.gz": "^1.0.5",
     "untar": "^0.2.9"

@@ -6,7 +6,6 @@ const tar = require('tar-fs');
 const targz = require('tar.gz');
 var path = require('path');
 
-
 const packages = {
     lodash: '4.17.4',
     request: '2.81.0',
@@ -22,21 +21,23 @@ const packages = {
 
 function downloadPackages (count, callback) {
     for (let i in packages) {
-        var file = fs.createWriteStream("./packages/"+i);
         var url = getNpmTarballUrl(i, packages[i]);
-
-        let stream = http.get(url, function(response) {
+        http.get(url, function(response) {
             response.pipe(fs.createWriteStream('tmp/' + i + '.tar')).on('finish', function () {
                 targz().extract('tmp/'+i+'.tar', 'packages/'+i, function(err){
                     if(err) {
                         console.log('Something is wrong ', err.stack);
                     }
-                    console.log('Job done!');
+                    count -= 1;
+                    if (count === 0) {
+                        callback();
+                    }
                 });
             });
         });
     }
-};
+}
 
 module.exports = downloadPackages;
+
 
