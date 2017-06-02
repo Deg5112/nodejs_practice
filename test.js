@@ -44,9 +44,11 @@ test('download', function (t) {
     callback()
   }
 
-  //TODO
-  //requiring further packages, re: making identical tests as the verifyLodash above, the problem is the other files have a bagillion requires inside the root files
-  //those would be brought in, if this was a real world scenario and all of these modules
-  //these would be brought in via npm install, as opposed to a coding test where these are programmitcally pulled from npm repo
-  //if you'd like me to write further test at some other point let me know
+
+  /*
+    requiring further packages, re: making identical tests as the verifyLodash above, the problem is the other files have a bagillion requires inside the root files
+    those would be brought in, if this was a real world scenario and all of these modules
+    were brought in via npm install, as opposed to a coding test where these are programmitcally pulled from npm repo
+    if you'd like me to write further test at some other point let me know
+  */
 });

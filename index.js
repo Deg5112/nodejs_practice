@@ -7,7 +7,7 @@ const tar = require('tar-fs');
 const targz = require('tar.gz');
 const cheerio = require('cheerio');
 
-//let me know if you want me to try anything else, looking forward to your feedback :)
+//This was fun, let me know if you want me to try anything else, looking forward to your feedback :)
 
 function downloadPackages (count, callback) {
     let packages  = {};
